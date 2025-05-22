@@ -1,4 +1,7 @@
 class Supplier:
+
+    """ Supplier class to manage supplier information and products. """
+
     def __init__(self, supplier_id, name, email, number):
         self.supplier_id = supplier_id
         self.name = name

@@ -1,4 +1,7 @@
 class Product:
+
+    """ Product class to represent a product in the inventory system. """
+
     def __init__(self, product_id, name, description, price):
         self.product_id = product_id
         self.name = name

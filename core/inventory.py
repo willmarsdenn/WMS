@@ -1,4 +1,7 @@
 class Inventory:
+
+    """ Inventory class to manage product stock levels and low stock alerts. """
+
     def __init__(self):
         self.products = {}
         

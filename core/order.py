@@ -3,6 +3,9 @@ from core.supplier import Supplier
 from core.finance import Finance
 
 class Order:
+
+    """ Order class to manage purchase and sales orders. """
+
     def __init__(self, order_id, order_date, supplier=None, customer=None):
         self.order_id = order_id
         self.order_date = order_date

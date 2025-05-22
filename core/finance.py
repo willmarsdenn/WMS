@@ -1,6 +1,9 @@
 from datetime import datetime
 
 class Finance:
+
+    """ Handles financial transactions and reporting for the system. """
+
     def __init__(self):
         self.transactions = []
         
