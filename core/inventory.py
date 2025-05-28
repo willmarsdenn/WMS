@@ -28,7 +28,7 @@ class Inventory:
         
     def get_low_stock_products(self):
         low_stock = []
-        for product_id, quantity in self.inventory.items():
+        for product_id, quantity in self.products.items():
             product = self.get_product(product_id)
 
             if product and quantity < product.threshold:
