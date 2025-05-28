@@ -1,7 +1,3 @@
-from core.inventory import Inventory
-from core.supplier import Supplier
-from core.finance import Finance
-
 class Order:
     def __init__(self, order_id, order_date, supplier=None, customer=None):
         self.order_id = order_id
