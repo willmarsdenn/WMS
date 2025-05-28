@@ -29,6 +29,7 @@ class Supplier:
         return {
             'supplier_id': self.supplier_id,
             'name': self.name,
-            'contact_info': self.contact_info,
+            'email': self.email,
+            'number': self.number,
             'products': [product.get_product_info() for product in self.products]
         }

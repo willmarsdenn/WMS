@@ -14,6 +14,11 @@ class Inventory:
         else:
             raise ValueError("Product not found in inventory.")
         
+    def get_product(self, product_id):
+        if product_id in self.products:
+            return self.products[product_id]
+        return None
+        
     def update_quantity(self, product_id, quantity):
         if product_id in self.products:
             product, current_quantity = self.products[product_id]
@@ -22,5 +27,15 @@ class Inventory:
             raise ValueError("Product not found in inventory.")
         
     def get_low_stock_products(self):
-        return {product_id: (product, quantity, threshold) for product_id, (product, quantity, threshold) in self.products.items() if quantity < threshold}
+        low_stock = []
+        for product_id, quantity in self.inventory.items():
+            product = self.get_product(product_id)
 
+            if product and quantity < product.threshold:
+                low_stock.append({
+                    'product': product,
+                    'quantity': quantity,
+                    'threshold': product.threshold
+                })
+            
+        return low_stock
