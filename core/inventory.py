@@ -28,14 +28,11 @@ class Inventory:
         
     def get_low_stock_products(self):
         low_stock = []
-        for product_id, quantity in self.products.items():
-            product = self.get_product(product_id)
-
-            if product and quantity < product.threshold:
+        for product_id, (product, quantity) in self.products.items():
+            if quantity < product.threshold:
                 low_stock.append({
                     'product': product,
                     'quantity': quantity,
                     'threshold': product.threshold
                 })
-            
         return low_stock
