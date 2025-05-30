@@ -26,10 +26,10 @@ python main.py
 
 ```
 # Add product to inventory
-add_product 1201 "Floor Lamp" "A description of the floor lamp" 100 5 10
+add_product 1201 Floor_Lamp A_description_of_the_floor_lamp 100 5 10
 
 # Add a supplier
-add_supplier 12 "Floor Lamps Inc" sales@floorlamps.com 0478378323
+add_supplier 12 FloorLampsInc sales@floorlamps.com 0478378323
 
 # Create and process orders
 create_purchase_order 9214 12
